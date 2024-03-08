@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "Libre Franklin", sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+main {
+    width: 375px;
+}
+section {
+    margin: 40px 0;
+}
+ .subscribe-text {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.4;
+    font-weight: 400;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+ h1::after {
+    content: " soon!";
+    opacity: 1;
+    font-weight: 700;
+}
+.content-container p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input[type="text"] {
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    border: 1px solid rgba(88, 69, 69, 0.5);
+    width: 100%;
+}
+
+.field p {
+    font-size: small;
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+}
+input[type="text"]::placeholder {
+    opacity: 0.5;
+}
+input[type="submit"] {
+    width: 100%;
+    background-color: var(--Blue);
+    border: none;
+    padding: 15px 0;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px var(--Pale-Blue);
+}
+input[type="submit"]:hover {
+    background-color: var(--Pale-Blue);
+}
+.three {
+    margin-top: 90px;
+    width: 385px;
+    display: flex;
+    justify-content: left;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+li {
+    border: 1px solid rgba(88, 69, 69, 0.5);
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li:hover {
+    background-color: var(--Blue);
+}
+ i:hover {
+    color: white;
+}
+.submit-field {
+    width: 100%;   
+}
+.four p {
+    text-align: center;
+    opacity: 0.6;
+}
+footer p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* validation */
+.valid {
+    border: 1px solid greenyellow;
+}
+.invalid {
+    border: 1px solid red;
+}
+ul li i {
+    color: #108eee;
+}
+ul li i:hover {
+    color: white;
+}
+
+/* medias */
+@media only screen and (min-width: 700px) {
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+    main {
+        width: 500px;
+    }
+    form {
+        display: block;
+    }
+    input[type="text"] {
+        margin-left: 20px;
+        width: 250px;
+    }
+    input[type="submit"] {
+        width: 150px;
+    }
+    .field, .submit-field {
+        display: inline-block; /* Change to inline-block for smaller screens */
+        width: auto; /* Let them occupy their natural width */
+        margin-right: 10px; /* Add some space between elements */
+        margin-bottom: 0; /* Remove bottom margin to keep them on the same line */
+        vertical-align: middle;
+    }
+
+    .chart {
+        width: 450px;
+    }
+    .field {
+        position: relative;
+    }
+    .field p {
+        position: absolute;
+        margin-left: 27px;
+    }
+    
+}
